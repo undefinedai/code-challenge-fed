@@ -1,31 +1,20 @@
 import Link from "next/link"
 import CartIcon from "components/cart-icon"
-import { FaBars } from "react-icons/fa"
+import style from "./header.scss"
+import { FaBars, FaTimes } from "react-icons/fa"
 
-export default ({ cartCount, onToggleNav }) => {
+export default ({ cartCount, isOpen, onToggleNav }) => {
   return (
-    <header>
+    <header className={style.header}>
       <Link href="/">
         <a>Store Name</a>
       </Link>
-      <div id="right">
-        <button onClick={onToggleNav}>
-          <FaBars />
+      <div className={style.header__right}>
+        <CartIcon className={style.header__cart} cartCount={cartCount} />
+        <button className={style.header__button} onClick={onToggleNav}>
+        {isOpen ? <FaTimes className={style.header__close} /> : <FaBars />}
         </button>
-        <CartIcon cartCount={cartCount} />
       </div>
-      <style jsx>{`
-        header {
-          align-items: center;
-          display: flex;
-          justify-content: space-between;
-          padding: 1rem;
-        }
-        #right {
-          align-items: center;
-          display: flex;
-        }
-      `}</style>
     </header>
   )
 }

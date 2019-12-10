@@ -1,0 +1,26 @@
+$brand-primary-dk: #37593f;
+$brand-secondary: #80FFEC;
+
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: darken($brand-secondary, 45);
+    color: #f7f7f7;
+
+    &__button {
+        border: none;
+        margin-left: 1rem;
+        background: none;
+    }
+
+    &__close {
+        color: red;
+    }
+
+    &__right {
+        align-items: center;
+        display: flex;
+    }
+}

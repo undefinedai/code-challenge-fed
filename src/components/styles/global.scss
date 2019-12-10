@@ -1,0 +1,20 @@
+$brand-primary: #10932e;
+$brand-primary-lt: #6edd88;
+$brand-primary-dk: #37593f;
+$black: #363635;
+$gray: #595a4a;
+
+:global(button) {
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    color: #f7f7f7;
+
+    &:hover {
+        background-position: -50% 100%;;
+    }
+
+    &:active {
+        box-shadow: 0;
+    }
+}
