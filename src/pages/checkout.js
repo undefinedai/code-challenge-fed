@@ -21,23 +21,23 @@ export default () => {
     <h1>{isSubmitted ? 'Thanks for shopping with us!' : 'Complete Your Checkout'}</h1>
       <form className={style.form} onSubmit={handleSubmit}>
       {isSubmitted ? null : <><div className={style.checkout__input}>
-          <label for="first" className={isFirstActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>First Name</label>
+          <label htmlFor="first" className={isFirstActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>First Name</label>
           <input onFocus={() => setFirstActive(true)} id="first" type="text" />
         </div>
         <div className={style.checkout__input}>
-          <label for="last" className={isLastActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Last Name</label>
+          <label htmlFor="last" className={isLastActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Last Name</label>
           <input onFocus={() => setLastActive(true)} id="last" type="text" />
         </div>
         <div className={style.checkout__input}>
-          <label for="email" className={isEmailActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Email</label>
+          <label htmlFor="email" className={isEmailActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Email</label>
           <input onFocus={() => setEmailActive(true)} id="email" type="email" />
         </div>
         <div className={style.checkout__input}>
-          <label for="phone" className={isPhoneActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Phone Number</label>
+          <label htmlFor="phone" className={isPhoneActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>Phone Number</label>
           <input onFocus={() => setPhoneActive(true)} id="phone" type="tel" />
         </div>
         <div className={style.checkout__input}>
-          <label for="state" className={isStateActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>State</label>
+          <label htmlFor="state" className={isStateActive ? [style.checkout__float, style.checkout__label].join(' ') : style.checkout__label}>State</label>
           <select id="state" onChange={() => setStateActive(true)}>
             <option value=""></option>
             <option value="KY">Kentucky</option>
@@ -45,7 +45,7 @@ export default () => {
         </div>
         <div className={style.checkout__checkbox}>
           <input type="checkbox" name="terms" id="terms"/>
-          <label for="terms">I agree to the terms and conditions</label> 
+          <label htmlFor="terms">I agree to the terms and conditions</label> 
         </div>
         <div>
           <button className={style.checkout__button} type="submit">Check Out</button>
