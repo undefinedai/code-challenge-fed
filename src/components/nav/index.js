@@ -1,11 +1,11 @@
 import Link from "next/link"
 
-export default ({ isOpen }) => {
-  if (!isOpen) {
-    return null
-  }
+export default ({ classname, isOpen }) => {
+  // if (!isOpen) {
+  //   return null
+  // }
   return (
-    <nav>
+    <nav className={classname}>
       <Link href="/checkout">
         <a>Check Out</a>
       </Link>

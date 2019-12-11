@@ -1,0 +1,28 @@
+$black: #363635;
+
+.wrapper {
+    position: relative;
+}
+
+.cartIcon {
+    cursor: pointer;
+    transition: color 300ms;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.cart {
+    margin-left: .5rem;
+    opacity: 0;
+    transition: opacity 300ms;
+    position: absolute;
+    cursor: pointer;
+}
+
+.show {
+    margin-left: .5rem;
+    opacity: 1;
+    position: absolute;
+}
