@@ -1,0 +1,93 @@
+@import '../../assets/scss/global.scss';
+@import '../../assets/scss/forms.scss';
+
+.section-checkout {
+    display: flex;
+    margin: 0 -15px;
+    @include max($medium) {
+        flex-direction: column;
+    }
+    .checkout-l {
+        padding: 0 15px;
+        width: 60%;
+        flex: 0 0 60%;
+        @include max($medium) {
+            width: 100%;
+            flex: auto;
+            margin-bottom: 20px;
+        }
+    }
+    .checkout-r {
+        padding: 0 15px;
+        width: 40%;
+        flex: 0 0 40%;
+        @include max($medium) {
+            width: 100%;
+            flex: auto;
+        }
+    }
+    .checkout-form {
+        background: #f5f8f8;
+        padding: 20px 30px;
+        border-radius: 8px;
+        @include max($xsmall) {
+            padding: 10px;
+        }
+        h2 {
+            font-size: 21px;
+            margin: 0 0 20px;
+        }
+        form {}
+
+    }
+    .cart-summary {
+        background: #f5f8f8;
+        padding: 20px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        h2 {
+            font-size: 21px;
+            margin: 0 0 20px;
+        }
+        .cart-products {
+            .item {
+                display: flex;
+                margin-bottom: 20px;
+                &:not(:last-child) {
+                   
+                }
+                .item-info {
+                    flex: 1;
+                    padding-right: 20px;
+                    .title {
+                        font-weight: bold;
+                    }
+                    .desc {
+                        font-size: 12px;
+                    }
+                }
+                .item-price {
+                    flex: 0 0 60px;
+                    width: 60px;
+                    text-align: right;
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }
+        .cart-total {
+            margin: 0 -20px;
+            padding: 20px 20px 0;
+            border-top: 1px solid rgba(0, 0, 0, .1);
+            text-align: right;
+            font-weight: bold;
+            .label {
+                font-size: 18px;
+                margin-right: 3px;
+            }
+            .val {
+                font-size: 24px;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@import '../../assets/scss/global.scss';
+
+.section-product-list {
+    h2 {
+    }
+    .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -20px;
+        @include max($large) {
+            margin: 0 -15px;
+        }
+        .item {
+            padding: 0 20px 40px;
+            width: 25%;
+            flex: 0 0 25%;
+            @include max($large) {
+                padding: 0 15px 40px;
+                width: 33.3333%;
+                flex: 0 0 33.3333%;
+            }
+            @include max($small) {
+                width: 50%;
+                flex: 0 0 50%;
+            }
+            @include max($xsmall) {
+                width: 100%;
+                flex: auto;
+            }
+            .img {
+                background: radial-gradient(#f7ffff, #dff1f0);
+                height: 150px;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 100px;
+                position: relative;
+                overflow: hidden;
+                &:before {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    z-index: 2;
+                    display: block;
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    background: rgba(0,0,0,.2);
+                    border-radius: 100%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                }
+                &:hover {
+                    // opacity: 0.9;
+                    animation: circle 0.5s 1;
+                }
+                a {
+                    line-height: 0;
+                    display: block;
+                    color: #d5ebea;
+                    
+                    
+                }
+            }
+            .item-info {
+                min-height: 130px;
+                @include max($xsmall) {
+                    min-height: 0;
+                }
+            }
+            .title {
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                @include max($xsmall) {
+                    font-size: 16px;
+                }
+                a {
+                }
+            }
+            .desc {
+                margin-bottom: 10px;
+            }
+            .item-b {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .price {
+                    font-size: 24px;
+                    font-weight: bold;
+                }
+                a.btn {
+                    svg {
+                        font-size: 20px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes circle {
+	0% {
+		box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+    
+	}
+	40% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+	}
+	100% {
+		box-shadow: 0 0 5px rgba(0, 0, 0, .05);
+	}
+}

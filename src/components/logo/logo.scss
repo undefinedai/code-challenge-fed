@@ -1,0 +1,31 @@
+@import '../../assets/scss/global.scss';
+
+.logo {
+    a {
+        align-items: center;
+        display: flex;
+        color: #494f4f;
+        svg {
+            font-size: 40px;
+            color: $blue;
+            @include max($xsmall) {
+                font-size: 30px;
+            }
+            @include max($xxxsmall) {
+                font-size: 24px;
+            }
+        }
+        span {
+            margin-left: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            @include max($xsmall) {
+                font-size: 20px;
+            }
+            @include max($xxxsmall) {
+                font-size: 16px;
+            }
+        }
+    }
+
+}

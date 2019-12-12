@@ -1,0 +1,25 @@
+$red: #f8713b;
+$redhover: #f8673b;
+$blue: #00c3b3;
+$bluehover: #06c2c9;
+$black: #494f4f;
+
+$xxxsmall: 400px;
+$xxsmall: 480px;
+$xsmall: 600px;
+$small: 768px;
+$medium: 992px;
+$large: 1140px;
+$xlarge: 1200px;
+
+@mixin min($device-width) { 
+    @media screen and (min-width: $device-width) {
+        @content 
+    }
+}
+  
+@mixin max($device-width) { 
+    @media screen and (max-width: $device-width - 1) {
+        @content 
+    }
+}

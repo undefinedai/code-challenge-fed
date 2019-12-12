@@ -31,8 +31,25 @@ When you're done, push your changes to your repo and send us your answers to the
 ## Questions & Rationale
 
 - Why did you choose the packages you installed (or why did you not use any)?
+
+Answer: I installed certain packages for quicker implementation and I like the style provided with the package for example like react-select
+
 - How long did this work take you?
+
+Answer: 5 hours
+
 - What did you get stuck on or what was the most difficult part?
+
+Answer: The most difficult part was choosing a layout after my many wire frames because they are so good design.
+
 - What was the easiest or fastest part?
+
+Answer: The fastest part was the executing my wireframe into code. Like the color scheme, shadows, and aditional icons.
+
 - If you had more time, what would you like to have implemented?
+
+Answer: I would have implemented the addtoCart feature form to have error handling UI.
+
 - What did you have to research or look up to complete this?
+
+Answer: I looked up what was the best way to layout a check out page.
