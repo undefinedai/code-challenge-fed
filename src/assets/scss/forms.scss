@@ -1,0 +1,77 @@
+.form-control {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 50px;
+    padding: 10px 20px;
+    line-height: 28px;
+    font-size: 14px;
+    width: 100%;
+    transition: all 0.3s;
+    &:focus {
+        border-color: $blue;
+        box-shadow: 0 0 10px rgba(53, 107, 89, 0.05) inset;
+    }
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+
+
+.form-control::-webkit-input-placeholder {
+    color: #6b5a4c;
+    opacity: 1;
+}
+.form-control:-moz-placeholder {
+    color: #6b5a4c;
+    opacity: 1;
+}
+
+.form-control::-moz-placeholder {
+    color: #6b5a4c;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {    
+    color: #6b5a4c;
+    opacity: 1;
+}
+.form-control:focus::-webkit-input-placeholder {
+    color: #6b5a4c;
+    opacity: 0.5;
+}
+.form-control:focus:-moz-placeholder {
+    color: #6b5a4c;
+    opacity: 0.5;
+}
+.form-control:focus::-moz-placeholder {
+    color: #6b5a4c;
+    opacity: 0.5;
+}
+.form-control:focus:-ms-input-placeholder {    
+    color: #6b5a4c;
+    opacity: 0.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    label {
+        margin-bottom: 7px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .form-control {
+        &.is-invalid {
+            border-color: $red;
+        }
+    }
+    .invalid-feedback {
+        margin: 5px 0 0;
+        font-size: 11px;
+        color: $red;
+    }
+}
