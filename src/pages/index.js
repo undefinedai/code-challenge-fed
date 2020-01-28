@@ -1,6 +1,9 @@
 import { Fragment, useState } from "react"
 import Header from "components/header"
 import Nav from "components/nav"
+import Button from "components/button"
+
+import gsap from 'gsap';
 
 export default () => {
   const [cartCount, setCartCount] = useState(0)
@@ -14,6 +17,15 @@ export default () => {
     setNavOpen((o) => !o)
   }
 
+  const cartAnimation = () => {
+    const tl = gsap.timeline()
+    tl.to('#cartIcon', { duration: 0.2, scale: 1.25 })
+      .to('#cartIcon', { duration: 0.1, rotation: 15 })
+      .to('#cartIcon', { duration: 0.1, rotation: -15 })
+      .to('#cartIcon', { duration: 0.1, rotation: 0 })
+      .to('#cartIcon', { duration: 0.2, scale: 1 })
+  }
+
   return (
     <div id="wrapper">
       <Header cartCount={cartCount} onToggleNav={handleNav} />
@@ -21,7 +33,11 @@ export default () => {
       <div id="card">
         <h1>Product Name</h1>
         <p>This is the product description</p>
-        <button onClick={addToCart}>Add to Cart</button>
+        <Button
+          type="button"
+          action={addToCart}
+          animation={cartAnimation}
+        >Add to Cart</Button>
       </div>
       <style jsx>{`
         #wrapper {
@@ -32,6 +48,9 @@ export default () => {
           background: #fff;
           box-shadow: 0 1px 3px #999;
           padding: 1rem;
+        }
+        #addToCart:hover {
+          cursor: pointer;
         }
       `}</style>
     </div>
