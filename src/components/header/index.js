@@ -9,7 +9,7 @@ export default ({ cartCount, onToggleNav }) => {
         <a>Store Name</a>
       </Link>
       <div id="right">
-        <button onClick={onToggleNav}>
+        <button id="hamburger" onClick={onToggleNav}>
           <FaBars />
         </button>
         <CartIcon cartCount={cartCount} />
@@ -24,6 +24,14 @@ export default ({ cartCount, onToggleNav }) => {
         #right {
           align-items: center;
           display: flex;
+        }
+        #hamburger {
+          margin: 0 15px;
+          background: none;
+          border: none;
+        }
+        #hamburger:hover {
+          cursor: pointer;
         }
       `}</style>
     </header>
